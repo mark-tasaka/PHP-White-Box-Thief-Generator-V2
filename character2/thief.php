@@ -359,6 +359,8 @@
     $hirelings = hirelings($charisma);
 
     $specialAbility = specialAbility();
+
+    $thiefSkills = thievery ($level);
     
     ?>
 
@@ -811,6 +813,7 @@
        <span id="specialAbility">
            <?php
            echo $specialAbility;
+           echo "<br/><br/>THIEVERY: " . $thiefSkills;;
            echo $characterRaceTraits;
            echo '<br/><br/>' . $hirelings;
            ?>

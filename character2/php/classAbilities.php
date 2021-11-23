@@ -1,8 +1,7 @@
 <?php
 function specialAbility()
 {
-    $message = "COMBAT FURY: Against foes of 1 HD or less, fighters get 1 attack per level each combat round.<br/><br/>SAVING THROWS: +2 bonus for saving throws vs. death and poison.";
-    
+    $message = "BACK STAB: On unsuspecting victims, the thief gains a +2 bonus to-hit and rollstheir weapon damage twice.<br/><br/>SAVING THROWS: +2 bonus for saving throws vs. traps (mundane and magical).";
     return $message;
 }
 

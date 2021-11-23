@@ -1,6 +1,6 @@
 <?php
 
-/*Fighter*/
+/*Thief*/
 
 function experienceNextLevel ($level)
 {
@@ -9,39 +9,39 @@ function experienceNextLevel ($level)
     switch($level)
     {
         case 1:
-            $xp = "2,000";
+            $xp = "1,250";
             break;
             
         case 2:
-            $xp = "4,000";
+            $xp = "2,500";
             break;
             
         case 3:
-            $xp = "8,000";
+            $xp = "5,000";
             break;
             
         case 4:
-            $xp = "16,000";
+            $xp = "10,000";
             break;
             
         case 5:
-            $xp = "32,000";
+            $xp = "20,000";
             break;
             
         case 6:
-            $xp = "64,000";
+            $xp = "40,000";
             break;
             
         case 7:
-            $xp = "128,000";
+            $xp = "80,000";
             break;
             
         case 8:
-            $xp = "256,000";
+            $xp = "160,000";
             break;
             
         case 9:
-            $xp = "512,000";
+            $xp = "320,000";
             break;
             
         case 10:
@@ -128,33 +128,53 @@ function singleSave ($level)
 4=spells*/
 function savingThrowMatrix ($level)
 {
-    $savingThrows = array(12, 13, 14, 15, 16);
+    $savingThrows = array(13, 14, 13, 15, 16);
     
-    if($level ==3)
+    if($level >=2 && $level <=3)
     {
-        $savingThrows = array(10, 11, 12, 15, 14);
+        $savingThrows = array(12, 14, 12, 14, 15);
     }
     else if($level >=4 && $level <=5)
     {
-        $savingThrows = array(10, 11, 12, 12, 14);
+        $savingThrows = array(11, 11, 11, 13, 14);
     }
     else if($level >=6 && $level <=7)
     {
-        $savingThrows = array(8, 9, 10, 12, 12);
+        $savingThrows = array(10, 11, 10, 12, 13);
     }
-    else if($level==8)
+    else if($level >=8 && $level <=9)
     {
-        $savingThrows = array(8, 9, 10, 9, 12);
+        $savingThrows = array(9, 8, 9, 11, 12);
     }
-    else if($level >=9)
+    else if($level ==10)
     {
-        $savingThrows = array(6, 7, 8, 9, 10);
+        $savingThrows = array(8, 8, 8, 10, 11);
     }
     
     return $savingThrows;
     
 }
 
+function thievery ($level)
+{
+    $skill = 2;
+    
+    if($level >=4 && $level <=6)
+    {
+        $skill = 3;
+    }
+    else if($level >=7 && $level <=9)
+    {
+        $skill = 4;
+    }
+    else if($level ==10)
+    {
+        $skill = 5;
+    }
+    
+    return $skill;
+    
+}
 
 
 ?>
